@@ -27,53 +27,39 @@ public class InventoryManager {
 		Product prod;
 		// add to DB directly
 		if(type.equalsIgnoreCase("mshoes") && details.size()==8) {
-				prod = new MensShoes(
-					(int)details.get(0), 
-					(float)details.get(1), 
-					(int)details.get(2), 
-					details.get(3).toString(), 
-					details.get(4).toString(), 
-					(int)details.get(5), 
-					details.get(6).toString(), 
-					details.get(7).toString()
-					);
+				//add to DB
+			return true;
 		} 
 		else if(type.equalsIgnoreCase("wshoes") && details.size() == 8) {
-				prod = new WomensShoes(
-					(int)details.get(0), 
-					(float)details.get(1), 
-					(int)details.get(2), 
-					details.get(3).toString(), 
-					details.get(4).toString(), 
-					(int)details.get(5), 
-					details.get(6).toString(), 
-					details.get(7).toString()
-					);
+				//add to DB
+			return true;
 		}
-		else if(type.equalsIgnoreCase("macc")) {
-			
+		else if(type.equalsIgnoreCase("acc")) {
+			// add to DB
+			return true;
 		}
-		else if(type.equalsIgnoreCase("wacc")) {
-			
-		}
-		
 		else {
 			return false;
 		}
 		
-		return true;
 	}
 	
-//	public boolean delProduct(int id) {
-//		// connect to DB and delete product id
-//	}
+	public boolean delProduct(int id) {
+		// get the ID of the object which has been clicked on 
+		// and delete it from the database and reload the UI page
+		return true;
+	}
 //	public boolean singleReport(){
 //		
 //	}
 //	public boolean fullReport() {
 //		
 //	}
-//	public fetchProductList(DB connection) {
-//		
-//	}
+	public ArrayList<Product> fetchProductList() {
+		// while fetching from DB you need to know if it is mens shoes or womens shoes or an accessory 
+		// make an object for that as shown below
+//		MensShoes = new MensShoes(int a, intb, check the mens shoes file for the constructor);
+		ArrayList<Product> pList = new ArrayList<Product>();
+		return pList;
+	}
 }
